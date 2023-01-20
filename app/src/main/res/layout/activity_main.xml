@@ -17,20 +17,21 @@
 
     <EditText
         android:id="@+id/edit_number"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:hint="Enter number here"
+        android:hint="@string/enter_number_here_text"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/button_enter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_info" />
+        app:layout_constraintTop_toBottomOf="@+id/text_info"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/button_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter"
+        android:text="@string/enter_text"
         app:layout_constraintBottom_toTopOf="@id/text_counter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,10 +41,20 @@
         android:id="@+id/text_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You have 5 more chances"
-        app:layout_constraintTop_toBottomOf="@id/button_enter"
+        android:text="@string/you_have_5_more_chances_text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"  />
+        app:layout_constraintTop_toBottomOf="@id/button_enter" />
+
+    <TextView
+        android:id="@+id/text_number_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/number_is_between_1_and_100_text"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_counter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

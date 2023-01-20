@@ -3,7 +3,6 @@ package com.umut.myapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -21,24 +20,23 @@ class MainActivity : AppCompatActivity() {
         var chances = 5
 
         val answer = (1..100).random()
-        Log.d("myLog", "answer: $answer")
 
         button.setOnClickListener {
-            if (editText.text.toString() != "") {
+            if (editText.text.toString().toIntOrNull() != null) {
                 userInput = Integer.parseInt(editText.text.toString())
             }
 
             if (userInput != answer) {
                 if (userInput < answer){
-                    statusText.text = "Try a higher number"
+                    statusText.text = getString(R.string.higher_number_text)
                 }
                 else{
-                    statusText.text = "Try a lower number"
+                    statusText.text = getString(R.string.lower_number_text)
                 }
                 chances--
-                counterText.text = "You have $chances chances left"
+                counterText.text = getString(R.string.counter_text, chances)
                 if (chances == 0) {
-                    val intent = Intent(this, SuccessActivity::class.java)
+                    val intent = Intent(this, ResultActivity::class.java)
                     intent.putExtra("status", "You Lost")
                     intent.putExtra("answer", answer)
                     intent.putExtra("chances", chances)
@@ -47,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             else {
-                val intent = Intent(this, SuccessActivity::class.java)
+                val intent = Intent(this, ResultActivity::class.java)
                 intent.putExtra("status", "You Won")
                 intent.putExtra("answer", answer)
                 intent.putExtra("chances", chances)

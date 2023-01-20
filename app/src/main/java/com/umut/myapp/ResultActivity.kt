@@ -7,13 +7,14 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 
-class SuccessActivity : AppCompatActivity() {
+class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_success)
+        setContentView(R.layout.activity_result)
 
-        val textSuccess = findViewById<TextView>(R.id.text_success)
+        val textSuccess = findViewById<TextView>(R.id.text_status)
         val textCounter = findViewById<TextView>(R.id.text_show_counter)
         val buttonPlay = findViewById<Button>(R.id.button_play)
         val layout = findViewById<ConstraintLayout>(R.id.layout)
@@ -24,13 +25,12 @@ class SuccessActivity : AppCompatActivity() {
 
         textSuccess.text = text
 
-        if(counter > 0){
-            layout.setBackgroundColor(Color.GREEN)
-            textCounter.text = "The answer is: $answer. You had $counter chances left!"
-        }
-        else{
+        if (counter > 0) {
+            layout.setBackgroundColor(ContextCompat.getColor(applicationContext, R.color.win_green))
+            textCounter.text = getString(R.string.win_text, answer, counter)
+        } else {
             layout.setBackgroundColor(Color.RED)
-            textCounter.text = "The answer is: $answer. You lost the game!"
+            textCounter.text = getString(R.string.lose_text, answer)
         }
 
         buttonPlay.setOnClickListener {

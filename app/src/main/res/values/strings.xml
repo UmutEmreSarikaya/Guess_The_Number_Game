@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MyApp</string>
+    <string name="higher_number_text">Try a higher number</string>
+    <string name="lower_number_text">Try a lower number</string>
+    <string name="counter_text">You have %1$d chances left</string>
+    <string name="win_text">The answer is: %1$d. You had %2$d chances left!</string>
+    <string name="lose_text">The answer is: %1$d. You lost the game!</string>
+    <string name="play_again_text">Play Again</string>
+    <string name="enter_number_here_text">Enter number*</string>
+    <string name="enter_text">Enter</string>
+    <string name="you_have_5_more_chances_text">You have 5 more chances</string>
+    <string name="number_is_between_1_and_100_text">*Number is between 1 and 100</string>
 </resources>
