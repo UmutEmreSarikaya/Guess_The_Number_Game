@@ -9,11 +9,11 @@ This project is mainly for learning basics of Android app development with Kotli
 
 <p align="center" >
 
-<img src="https://user-images.githubusercontent.com/61623237/213799445-aa30d3a6-25d7-43ea-ab3a-6a9bdbae4421.png" width="300" height="600" hspace="20" >
+<img src="https://user-images.githubusercontent.com/61623237/213799445-aa30d3a6-25d7-43ea-ab3a-6a9bdbae4421.png" width="200" height="400" hspace="20" >
 
-<img src="https://user-images.githubusercontent.com/61623237/213799862-8f0f2c1d-5bfd-4611-864d-434c61352a0e.png" width="300" height="600" >
+<img src="https://user-images.githubusercontent.com/61623237/213799862-8f0f2c1d-5bfd-4611-864d-434c61352a0e.png" width="200" height="400" >
 
-<img src="https://user-images.githubusercontent.com/61623237/213801428-516c8b37-9fc5-412a-809e-555df9fb3f0f.png" width="300" height="600" hspace="20">
+<img src="https://user-images.githubusercontent.com/61623237/213801428-516c8b37-9fc5-412a-809e-555df9fb3f0f.png" width="200" height="400" hspace="20">
 
 </p>
 
